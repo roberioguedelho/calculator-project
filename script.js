@@ -189,10 +189,10 @@ function divisao() {
 
 function funcaoIgual() {
     if (igual == '+'){
-            total += Number(input.value);
-            input.value = total;
-            igual = "";
-            total = undefined;
+        input.value = total;
+        igual = "";
+        total = undefined;
+        total += Number(input.value);
     } else if (igual == '-') {
         total -= Number(input.value);
         input.value = total;

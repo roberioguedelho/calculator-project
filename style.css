@@ -12,7 +12,8 @@
     margin: auto;
     border: 0;
     margin-top: 3rem;
-    border-radius: 0.25rem;
+    border-radius: .6rem;
+    padding: 0 0.5rem;
 }
 
 #data-table thead tr th {
@@ -24,7 +25,7 @@
 }
 
 .endButtons {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 input {
@@ -36,9 +37,12 @@ input {
 }
 
 button {
-    width: 8rem;
-    height: 2rem;
+    width: 5rem;
+    height: 3rem;
 }
 
-
+.igualButton {
+    height: 6.1rem;
+    
+}
 

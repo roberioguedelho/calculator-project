@@ -30,12 +30,16 @@
                 </tr>
                 <tr>
                     <td >
-                        <button class="startButtons">&#9003;</button>
+                        <button class="startButtons" onclick="limpar()">Limpar</button>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td >
+                        <button class="startButtons" onclick="multiplicacao()">&#215</button>
+                    </td>
                     <td>
                         <button class="startButtons" onclick="divisao()">&#247;</button>
+                    </td>
+                    <td>
+                        <button class="startButtons" >&#9003;</button>
                     </td>
                 </tr>
                 <tr>
@@ -49,7 +53,7 @@
                         <button onclick="clickNumber(7)">7</button>
                     </td>
                     <td>
-                        <button onclick="multiplicacao()">&#215</button>
+                        <button onclick="subtracao()">-</button>
                     </td>
                 </tr>
                 <tr>
@@ -63,7 +67,7 @@
                         <button onclick="clickNumber(6)">6</button>
                     </td>
                     <td>
-                        <button onclick="subtracao()">-</button>
+                        <button onclick="soma()">+</button>
                     </td>
                 </tr>
                 <tr>
@@ -76,8 +80,8 @@
                     <td>
                         <button onclick="clickNumber(3)">3</button>
                     </td>
-                    <td>
-                        <button onclick="soma()">+</button>
+                    <td rowspan="2">
+                        <button class="endButtons igualButton" onclick="funcaoIgual()">=</button>
                     </td>
                 </tr>
                 <tr>
@@ -91,7 +95,7 @@
                         <button class="endButtons" onclick="clickNumber('.')">,</button>
                     </td>
                     <td>
-                        <button class="endButtons" onclick="funcaoIgual()">=</button>
+                        
                     </td>
                 </tr>
 
