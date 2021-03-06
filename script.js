@@ -10,10 +10,8 @@ function clickNumber(texto) {
 
     if (igualFoiClicado==true) {
         input.value = "";
-    }
-    
+    }   
     if (!contemPonto && texto =='.') {   
-
         if (input.value == "") {
             input.value = "0."
             igualFoiClicado=false;
@@ -22,24 +20,22 @@ function clickNumber(texto) {
             igualFoiClicado=false;
         }       
     } 
-
     if (texto != '.') {
         input.value += texto;
         igualFoiClicado=false;
     }
-
 }
+
 
 function limpar() {
     input.value = "";
      total = 0; 
     igual = "";
     igualFoiClicado = false;
-
 }
 
-function operacoes(operacao) {
 
+function operacoes(operacao) {
 
     if (operacao == '+') {
         total += Number(input.value);
@@ -48,6 +44,10 @@ function operacoes(operacao) {
         igualFoiClicado = false;
 
     } else if ( operacao == '-' ) {
+        total -= Number(input.value);
+        input.value = "";
+        igual = "+";
+        igualFoiClicado = false;
 
     } else if ( operacao == 'x' ) {
 
@@ -63,7 +63,16 @@ function funcaoIgual() {
             input.value = total;
             igual = "";
             total = 0;
-        }  
+        }  else if (igual == '-'){
+            total -= Number(input.value);
+            input.value = total;
+            igual = "";
+            total = 0;
+        } else if (igual == 'x') {
+
+        } else if (igual == '/') {
+            
+        }
     } else {
         input.value = total;
     }

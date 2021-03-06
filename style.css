@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: large;
 
 }
 
@@ -18,16 +19,25 @@
     color: white;
 }
 
+.startButtons {
+    margin-top: 1rem;
+}
+
+.endButtons {
+    margin-bottom: 1rem;
+}
+
 input {
     width: 100%;
+    height: 2rem;
     background-color: white;
     color: black;
     text-align: right;
 }
 
 button {
-    width: 5rem;
-    height: 1;
+    width: 8rem;
+    height: 2rem;
 }
 
 
