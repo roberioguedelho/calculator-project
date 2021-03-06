@@ -1,7 +1,8 @@
 
 const input = document.getElementById('numeros');
 
-let total = 0; 
+var total;
+var numeroDigitado;
 var igual = "";
 var igualFoiClicado = false;
 
@@ -26,56 +27,187 @@ function clickNumber(texto) {
     }
 }
 
-
 function limpar() {
     input.value = "";
-     total = 0; 
+    total = undefined; 
     igual = "";
     igualFoiClicado = false;
 }
 
-
-function operacoes(operacao) {
-
-    if (operacao == '+') {
-        total += Number(input.value);
-        input.value = "";
+function soma() {
+    if (total != undefined && input.value ==""){
         igual = "+";
         igualFoiClicado = false;
-
-    } else if ( operacao == '-' ) {
-        total -= Number(input.value);
-        input.value = "";
+    }
+    if (total == undefined && input.value != "") {
+        total = Number(input.value);
         igual = "+";
         igualFoiClicado = false;
+        input.value = "";
+    } else {
+            if (igual == "+" && input.value!=""){
+                total = total + Number(input.value);
+                input.value = "";
+                igual = "+";
+                igualFoiClicado = false;
+                console.log(total);
+            } else if (igual == '-' && input.value!="") {
+                total = total - Number(input.value);
+                input.value = "";
+                igual = "+";
+                igualFoiClicado = false;
+            } else if (igual == 'x' && input.value!="") {
+                total = total*Number(input.value);
+                input.value = "";
+                igual = "+";
+                igualFoiClicado = false;
 
-    } else if ( operacao == 'x' ) {
+            } else if (igual == '/' && input.value!="") {
+                total = total/Number(input.value);
+                input.value = "";
+                igual = "+";
+                igualFoiClicado = false;
 
-    } else if (operacao == '/' ) {
-    } 
+            }
+    }
 }
 
+function subtracao() {
+    if (total != undefined && input.value ==""){
+        igual = "-";
+        igualFoiClicado = false;
+
+    }
+    if (total == undefined && input.value != "") {
+        total = Number(input.value);
+        console.log(total);
+        igual = "-";
+        igualFoiClicado = false;
+        input.value = "";
+    } else {
+            if (igual == "+" && input.value!=""){
+                total = total + Number(input.value);
+                input.value = "";
+                igual = "-";
+                igualFoiClicado = false;
+                console.log(total);
+            } else if (igual == '-' && input.value!="") {
+                total = total - Number(input.value);
+                input.value = "";
+                igual = "-";
+                igualFoiClicado = false;
+            } else if (igual == 'x' && input.value!="") {
+                total = total*Number(input.value);
+                input.value = "";
+                igual = "-";
+                igualFoiClicado = false;
+
+            } else if (igual == '/' && input.value!="") {
+                total = total/Number(input.value);
+                input.value = "";
+                igual = "-";
+                igualFoiClicado = false;
+            }
+    }
+}
+
+function multiplicacao() {
+    if (total != undefined && input.value ==""){
+        igual = "x";
+        igualFoiClicado = false;
+    }
+    if (total == undefined && input.value != "") {
+        total = Number(input.value);
+        console.log(total);
+        igual = "x";
+        igualFoiClicado = false;
+        input.value = "";
+    } else {
+            if (igual == "+" && input.value!=""){
+                total = total + Number(input.value);
+                input.value = "";
+                igual = "x";
+                igualFoiClicado = false;
+                console.log(total);
+            } else if (igual == '-' && input.value!="") {
+                total = total - Number(input.value);
+                input.value = "";
+                igual = "x";
+                igualFoiClicado = false;
+            } else if (igual == 'x' && input.value!="") {
+                total = total*Number(input.value);
+                input.value = "";
+                igual = "x";
+                igualFoiClicado = false;
+
+            } else if (igual == '/' && input.value!="") {
+                total = total/Number(input.value);
+                input.value = "";
+                igual = "x";
+                igualFoiClicado = false;
+            }
+    }
+}
+
+function divisao() {
+    if (total != undefined && input.value ==""){
+        igual = "/";
+        igualFoiClicado = false;
+    }
+    if (total == undefined && input.value != "") {
+        total = Number(input.value);
+        console.log(total);
+        igual = "/";
+        igualFoiClicado = false;
+        input.value = "";
+    } else {
+            if (igual == "+" && input.value!=""){
+                total = total + Number(input.value);
+                input.value = "";
+                igual = "/";
+                igualFoiClicado = false;
+                console.log(total);
+            } else if (igual == '-' && input.value!="") {
+                total = total - Number(input.value);
+                input.value = "";
+                igual = "/";
+                igualFoiClicado = false;
+            } else if (igual == 'x' && input.value!="") {
+                total = total*Number(input.value);
+                input.value = "";
+                igual = "/";
+                igualFoiClicado = false;
+
+            } else if (igual == '/' && input.value!="") {
+                total = total/Number(input.value);
+                input.value = "";
+                igual = "/";
+                igualFoiClicado = false;
+            }
+    }
+}
 
 function funcaoIgual() {
-    if (input.value != "") {
-        if (igual == '+'){
+    if (igual == '+'){
             total += Number(input.value);
             input.value = total;
             igual = "";
-            total = 0;
-        }  else if (igual == '-'){
-            total -= Number(input.value);
-            input.value = total;
-            igual = "";
-            total = 0;
-        } else if (igual == 'x') {
-
-        } else if (igual == '/') {
-            
-        }
-    } else {
+            total = undefined;
+    } else if (igual == '-') {
+        total -= Number(input.value);
         input.value = total;
+        igual = "";
+        total = undefined;
+    } else if (igual == 'x') {
+        total = total * Number(input.value);
+        input.value = total;
+        igual = "";
+        total = undefined;
+    } else if (igual == '/') {
+        total = total / Number(input.value);
+        input.value = total;
+        igual = "";
+        total = undefined;
     }
-
     igualFoiClicado = true;
 }
