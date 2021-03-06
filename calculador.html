@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <table id="data-table" >
+            <thead>
+                <tr>
+                    <th colspan="4">Calculadora</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <input id="numeros" disabled type="text" value="">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="clickNumber(9)">9</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(8)">8</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(7)">7</button>
+                    </td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="clickNumber(4)">4</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(5)">5</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(6)">6</button>
+                    </td>
+                    <td>
+                        <button>-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="clickNumber(1)">1</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(2)">2</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(3)">3</button>
+                    </td>
+                    <td>
+                        <button onclick="operacoes('+')">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="limpar()">limpar</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber(0)">0</button>
+                    </td>
+                    <td>
+                        <button onclick="clickNumber('.')">,</button>
+                    </td>
+                    <td>
+                        <button onclick="funcaoIgual()">=</button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
