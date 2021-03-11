@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dev Calculator</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
-<body>
+
+<body style="background-color: rgb(29, 29, 29);">
     <header>
-        
+
     </header>
 
     <main>
-        <table id="data-table" >
+        <table id="data-table">
             <thead>
                 <tr>
                     <th colspan="4">Calculadora</th>
@@ -25,14 +27,14 @@
                 <tr>
                     <td colspan="4">
                         <input id="numeros" disabled type="text" value="">
-                        
+
                     </td>
                 </tr>
                 <tr>
-                    <td >
-                        <button class="startButtons" onclick="limpar()">Limpar</button>
+                    <td>
+                        <button class="startButtons" onclick="limpar()">C</button>
                     </td>
-                    <td >
+                    <td>
                         <button class="startButtons" onclick="multiplicacao()">&#215</button>
                     </td>
                     <td>
@@ -95,7 +97,7 @@
                         <button class="endButtons" onclick="clickNumber('.')">,</button>
                     </td>
                     <td>
-                        
+
                     </td>
                 </tr>
 
@@ -106,4 +108,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
